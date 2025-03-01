@@ -1,0 +1,540 @@
+
+
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color:beige;
+}
+
+header{
+    position: fixed;
+    top:0%;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: saddlebrown;
+
+}
+.nav{
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo{
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.box{
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.cart-count{
+    position: absolute;
+    background-color: black;
+    top: -10px;
+    right: 0;
+    padding: 3px;
+    height: 18px;
+    width: 18px;
+    line-height: 20px;
+    border-radius: 50%;
+    z-index: 99;
+
+ }
+
+ #cart-icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding:-10px;
+ }
+
+ #home-icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding:-10px;
+    position: relative;
+    right: 50px;
+    bottom: 28px;
+    color: white;
+ }
+
+ img{
+    width: 100%;
+ }
+
+ .container{
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+    
+ }
+
+ h2.title{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #120606;
+ }
+
+ .shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 1.5rem;
+    justify-content: center;
+    align-content: center;
+ }
+
+ .dress-box{
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+    border-radius: 3px;
+
+ }
+ .pic{
+    overflow: hidden;
+}
+ .pic:hover img{
+    transform: scale(1.5);
+    
+ }
+
+.dress-img{
+    transition: 0.5s;
+
+    object-fit: cover;
+}
+.dress-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.dress-price{
+    font-weight: 500;
+}
+
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: bisque;
+    color: #120606;
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart:hover{
+    background-color: burlywood;
+}
+
+ .cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+    z-index: 100;
+    transition: right 0.5s ease;
+
+ }
+
+ .cart-active{
+    right: 0;
+    transition: right 0.5 ease;
+ }
+
+ .cart-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0.1);
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(0,0,0.1);
+    padding-bottom: 10px;
+}
+.cart-img{
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border: wheat;
+    padding: 5px;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.price-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-dress-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: brown;
+    font-weight: 500;
+
+}
+.cart-price{
+    font-weight: 500;
+}
+
+.cart-quantity{
+    border: 1px solid rgba(0,0,0.1);
+    outline: none;
+    width: 2.4rem;
+    text-align: center;
+    
+}
+.cart-remove{
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price{
+  margin-left: 0.5rem;
+}
+
+.btn-buy{
+    padding: 12px 20px;
+    background-color: wheat;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#cart-close{
+  position: absolute;
+  top: 0;
+  right: 0.8rem;
+  font-size: 1.5rem;
+  
+}
+.hrz{
+    border-width: 0.5px;
+    border-color:black;
+}
+
+.p-detail{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+}
+
+
+.p-1{
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+.p-2{
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+
+
+ /* * {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: saddlebrown;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.box {
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    background-color: black;
+    top: -10px;
+    right: 0;
+    padding: 3px;
+    height: 18px;
+    width: 18px;
+    line-height: 20px;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+#cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: -10px;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+}
+
+h2.title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #120606;
+}
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.dress-box {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+    border-radius: 3px;
+}
+
+.pic {
+    overflow: hidden;
+}
+
+.pic:hover img {
+    transform: scale(1.5);
+}
+
+.dress-img {
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.dress-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.dress-price {
+    font-weight: 500;
+}
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: bisque;
+    color: #120606;
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart:hover {
+    background-color: burlywood;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+    z-index: 100;
+    transition: right 0.5s ease;
+}
+
+.cart-active {
+    right: 0;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.cart-img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border: wheat;
+    padding: 5px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-dress-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: brown;
+    font-weight: 500;
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    width: 2.4rem;
+    text-align: center;
+}
+
+.cart-remove {
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price {
+    margin-left: 0.5rem;
+}
+
+.btn-buy {
+    padding: 12px 20px;
+    background-color: wheat;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#cart-close {
+    position: absolute;
+    top: 0;
+    right: 0.8rem;
+    font-size: 1.5rem;
+} */
